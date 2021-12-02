@@ -1,0 +1,41 @@
+html {
+  // A font-size of 62.5% will create a base font-size of 10px in most cases
+  font-size: 62.5%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  font: 400 1.8rem / 1.66 'Open Sans';
+}
+
+img {
+  max-width: 100%; /* [1] */
+  font-style: italic; /* [2] */
+  vertical-align: middle; /* [3] */
+}
+
+button,
+a {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+iframe { border: 0; }

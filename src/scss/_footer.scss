@@ -1,2 +1,16 @@
 .c-footer {
- }
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: right;
+  }
+
+  &__logo {
+    margin-left: auto;
+    display: inline-block;
+
+    &-img {
+      max-width: 12rem;
+    }
+  }
+}

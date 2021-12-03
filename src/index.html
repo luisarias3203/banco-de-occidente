@@ -8,53 +8,127 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
-    <header class="navbar navbar-expand-md navbar-light bg-gray-100">
-      <nav class="">
-        <nav class="" aria-label="Main navigation">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src="./assets/images/banco-occidente.jpg"
-                class="img-fluid"
-                alt="" title=""
-                width="30" height="24">
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
+    <header class="navbar navbar-expand-lg c-header">
+      <nav class="container-xxl" aria-label="Main navigation">
+        <a class="navbar-brand c-nav__logo" href="/">
+          <img src="/assets/images/banco-occidente.jpg"
+            class="img-fluid c-nav__logo-img"
+            alt="banco de occidente" title="banco de occidente">
+        </a>
+        <button class="navbar-toggler collapsed ms-lg-auto c-nav__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list c-nav__icon"></i>
+        </button>
+        <div class="navbar-collapse collapse ms-lg-auto justify-content-end" id="navbarSupportedContent" style="">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="dropdown-toggle c-nav__dropdown" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="c-nav__avatar">
+                  <div>
+                    <p class="c-nav__avatar-name">
+                      Carlos Gómez
+                    </p>
+                    <p class="c-nav__avatar-role">
+                      Gerente de Relación
+                    </p>
+                  </div>
+                  <div class="c-nav__avatar-image ratio ratio-1x1">
+                    <img class="c-nav__avatar-img"
+                      src="/assets/images/avatar.jpg"
+                      alt="avatar" title="avatar">
+                  </div>
+                </div>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Option 1</a></li>
+                <li><a class="dropdown-item" href="#">Option 2</a></li>
+                <li><a class="dropdown-item" href="#">Option 3</a></li>
               </ul>
-            </div>
-          </div>
-        </nav>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <main id="content" class="d-flex align-items-center">
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <main id="content">
+      <div class="small-container">
+        <div class="c-info">
+          <a href="#" class="c-info__arrow">
+            <i class="bi bi-arrow-left-short"></i>
+          </a>
+          <div class="text-center">
+            <h2 class="c-info__name">Flotas La Macarena</h2>
+            <p class="c-info__nit">Nit: <span>800 220 154</span></p>
+            <ul class="list-inline">
+              <li class="list-inline-item c-info__feature">
+                <strong>
+                  Capa:
+                </strong>
+                <span>
+                  Oro
+                </span>
+              </li>
+              <li class="list-inline-item c-info__feature">
+                <strong>
+                  Segmento:
+                </strong>
+                <span>
+                  A
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="nav nav-tabs c-tabs" id="myTab" role="tablist">
+          <li class="nav-item d-none d-lg-block" role="presentation">
+            <button class="nav-link border-0 c-tabs__tab active" id="operacion-tab" data-bs-toggle="tab" data-bs-target="#operacion" type="button" role="tab" aria-controls="operacion" aria-selected="true">Operación</button>
+          </li>
+          <li class="nav-item d-none d-lg-block" role="presentation">
+            <button class="nav-link border-0 c-tabs__tab" id="indicadores-tab" data-bs-toggle="tab" data-bs-target="#indicadores" type="button" role="tab" aria-controls="indicadores" aria-selected="false">Indicadores</button>
+          </li>
+          <li class="nav-item d-none d-lg-block" role="presentation">
+            <button class="nav-link border-0 c-tabs__tab" id="informacion-tab" data-bs-toggle="tab" data-bs-target="#informacion" type="button" role="tab" aria-controls="informacion" aria-selected="false">Información Cliente</button>
+          </li>
         </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="operacion" role="tabpanel" aria-labelledby="operacion-tab">
+            <p class="c-content-tabs__text fw-bold">Indique la línea de crédito que requiere reconsiderar</p>
+            <div class="row justify-content-center">
+              <div class="col-6 col-sm-3">
+                <div class="c-card is-active">
+                  <img src="/assets/images/cartera.jpg"
+                    class="c-card__img"
+                    alt="cartera" title="cartera">
+                  <p class="c-card__name">Cartera ordinaria</p>
+                  <p class="c-card__option">Continuar</p>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="c-card">
+                  <img src="/assets/images/leasing.jpg"
+                    class="c-card__img"
+                    alt="leasing" title="leasing">
+                  <p class="c-card__name">Leasing</p>
+                  <p class="c-card__option">Continuar</p>
+                </div>
+              </div>
+            </div>
+            <div class="c-content-tabs__info">
+              <span class="c-content-tabs__info-icon"></span>
+              <p class="c-content-tabs__info-paragraph">Las demás lineas de credito no estarán disponibles por el momento</p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="indicadores" role="tabpanel" aria-labelledby="indicadores-tab">2</div>
+          <div class="tab-pane fade" id="informacion" role="tabpanel" aria-labelledby="informacion-tab">3</div>
+        </div>
       </div>
     </main>
-    <footer>
-
+    <footer class="c-footer">
+      <div class="container-xxl">
+        <a class="c-footer__logo" href="/">
+          <img src="/assets/images/aval.jpg"
+          class="img-fluid c-footer__logo-img"
+          alt="aval" title="aval">
+        </a>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>

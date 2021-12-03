@@ -1,0 +1,46 @@
+.c-info {
+  margin-top: 3rem;
+
+  &__arrow {
+    color: $blue;
+    font-size: 4.5rem;
+    left: 1rem;
+    position: absolute;
+    top: 1rem;
+    transition-duration: 0.3s;
+
+    &:hover {
+      color: $black;
+    }
+
+    @include media-breakpoint-up(lg) {
+      position: static;
+    }
+  }
+
+  &__name {
+    color: $text-dark;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  &__nit {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  &__feature {
+    color: $text-dark;
+    margin-right: 0;
+
+    &:not(:last-of-type) {
+      &::after {
+        color: $blue;
+        content: "\f309";
+        font-family: bootstrap-icons;
+        font-size: 2.5rem;
+        vertical-align: middle;
+      }
+    }
+  }
+}

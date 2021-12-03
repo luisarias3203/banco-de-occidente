@@ -1,0 +1,32 @@
+.c-tabs {
+  align-items: center;
+  border-bottom: 0.1rem solid $border-light;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+
+  &__tab {
+    position: relative;
+    padding: 1.5rem 0;
+    font-weight: bold;
+    color: $text-light;
+
+    &.active {
+      color: $text-dark;
+
+      &::after {
+        background-color: $blue;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 0.3rem;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
+}

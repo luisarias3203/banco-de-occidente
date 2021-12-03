@@ -1,0 +1,51 @@
+.c-content-tabs {
+  &__text {
+    color: $blue;
+    margin-bottom: 3rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__info {
+    align-items: center;
+    background-color: $orange-light;
+    border-radius: 0.5rem;
+    color: $orange-dark;
+    display: flex;
+    margin-top: 5rem;
+    padding: 1rem;
+
+    &-icon {
+      display: inline-flex;
+      align-items: center;
+
+      &::before {
+        display: inline-block;
+        font-size: 2.5rem;
+        content: "\f431";
+        font-family: bootstrap-icons;
+      }
+
+      &::after {
+        background-color: $orange-dark;
+        content: "";
+        display: inline-block;
+        height: 2.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 0.2rem;
+      }
+    }
+
+    &-paragraph {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

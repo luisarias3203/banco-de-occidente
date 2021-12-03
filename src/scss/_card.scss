@@ -1,0 +1,53 @@
+.c-card {
+  border-radius: 1rem;
+  border: 0.1rem solid $border-light;
+  text-align: center;
+  transition-duration: 0.3s;
+
+  &.is-active,
+  &:hover {
+    border: 0.1rem solid $option-dark;
+
+    .c-card {
+      &__name {
+        color: $text-dark;
+      }
+
+      &__option {
+        color: $blue;
+        background-color: $option-dark;
+      }
+    }
+  }
+
+  &__img {
+    margin-top: 2rem;
+    max-width: 7rem;
+    margin-bottom: 2rem;
+  }
+
+  &__name,
+  &__option {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition-duration: 0.3s;
+  }
+
+  &__name {
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__option {
+    background-color: $option-light;
+    color: $text-light;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 0;
+  }
+}

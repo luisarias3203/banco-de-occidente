@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap';
-@import 'scss/base';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 @import 'scss/variables';
+@import 'scss/base';
 @import 'scss/header';
 @import 'scss/nav';
+@import 'scss/info';
+@import 'scss/tabs';
+@import 'scss/content-tabs';
+@import 'scss/card';
 @import 'scss/footer';

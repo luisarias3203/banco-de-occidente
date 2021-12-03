@@ -8,4 +8,17 @@ if (environment.production) {
   enableProdMode();
 }
 
-console.log('test')
+const data = {
+  nit: '800220154'
+}
+
+fetch('https://4rcti6yv14.execute-api.us-east-2.amazonaws.com/test/?', {
+  method: 'POST',
+  body: JSON.stringify(data),
+  headers: {
+    'Content-type': 'application/json'
+  }
+}).then(response => response.json())
+  .then(json => {
+    console.log(json)
+  })
